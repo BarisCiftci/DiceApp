@@ -11,7 +11,6 @@
 		3D033E522831539E00AE4922 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D033E512831539E00AE4922 /* SceneDelegate.swift */; };
 		3D033E542831539E00AE4922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D033E532831539E00AE4922 /* ViewController.swift */; };
 		3D033E572831539E00AE4922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D033E552831539E00AE4922 /* Main.storyboard */; };
-		3D033E59283153A000AE4922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D033E58283153A000AE4922 /* Assets.xcassets */; };
 		3D033E5C283153A000AE4922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D033E5A283153A000AE4922 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +20,6 @@
 		3D033E512831539E00AE4922 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3D033E532831539E00AE4922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D033E562831539E00AE4922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3D033E58283153A000AE4922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D033E5B283153A000AE4922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D033E5D283153A000AE4922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 				3D033E512831539E00AE4922 /* SceneDelegate.swift */,
 				3D033E532831539E00AE4922 /* ViewController.swift */,
 				3D033E552831539E00AE4922 /* Main.storyboard */,
-				3D033E58283153A000AE4922 /* Assets.xcassets */,
 				3D033E5A283153A000AE4922 /* LaunchScreen.storyboard */,
 				3D033E5D283153A000AE4922 /* Info.plist */,
 			);
@@ -126,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D033E5C283153A000AE4922 /* LaunchScreen.storyboard in Resources */,
-				3D033E59283153A000AE4922 /* Assets.xcassets in Resources */,
 				3D033E572831539E00AE4922 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
