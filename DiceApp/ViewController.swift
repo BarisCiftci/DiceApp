@@ -52,10 +52,13 @@ class ViewController: UIViewController {
             UIImage(named: "DiceFive"),
             UIImage(named: "DiceSix")
         ]
-        
+        // Random Image
         diceImageViewOne.image = diceArray[Int.random(in: 0...5)]
-        
         diceImageViewTwo.image = diceArray[Int.random(in: 0...5)]
+        
+        // Random rotation
+        diceImageViewOne.transform = CGAffineTransform(rotationAngle: CGFloat(Int.random(in: 0...Int(Double(20626.5)))))
+        diceImageViewTwo.transform = CGAffineTransform(rotationAngle: CGFloat(Int.random(in: 0...Int(Double(20626.5)))))
         
     }
     
