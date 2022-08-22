@@ -12,28 +12,52 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewOne: UIImageView!
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
-    //Button Tapped action
+    let diceArray = [
+        UIImage(named: "DiceOne"),
+        UIImage(named: "DiceTwo"),
+        UIImage(named: "DiceThree"),
+        UIImage(named: "DiceFour"),
+        UIImage(named: "DiceFive"),
+        UIImage(named: "DiceSix")
+    ]
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
     
-    @IBAction func rollButtonPressed(_ sender: Any) {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            
+            DiceMotionStart()
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
-        let diceArray = [
-            UIImage(named: "DiceOne"),
-            UIImage(named: "DiceTwo"),
-            UIImage(named: "DiceThree"),
-            UIImage(named: "DiceFour"),
-            UIImage(named: "DiceFive"),
-            UIImage(named: "DiceSix")
-        ]
+        if motion == .motionShake {
+            
+            DiceMotionEnd()
+        }
+        
+    }
+    
+    
+    func DiceMotionStart() {
+        
         // Random Image
         diceImageViewOne.image = diceArray[Int.random(in: 0...5)]
         diceImageViewTwo.image = diceArray[Int.random(in: 0...5)]
         
+    }
+    
+    func DiceMotionEnd() {
         // Random rotation
         diceImageViewOne.transform = CGAffineTransform(rotationAngle: CGFloat(Int.random(in: 0...360)))
         diceImageViewTwo.transform = CGAffineTransform(rotationAngle: CGFloat(Int.random(in: 0...360)))
         
     }
-   
+    
+    
+    
     
 }
 
