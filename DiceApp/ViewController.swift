@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -46,6 +47,8 @@ class ViewController: UIViewController {
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             RandomDice()
+            DeviceVibrationStart()
+            
             
         }
     }
@@ -55,6 +58,7 @@ class ViewController: UIViewController {
         if motion == .motionShake {
             RandomDiceRotation()
             RandomDicePosition()
+            DeviceVibrationEnd()
         }
     }
     
@@ -77,6 +81,18 @@ class ViewController: UIViewController {
         //Random position
         diceImageViewOne.layer.position = CGPoint(x: Int.random(in: 100...200), y: Int.random(in: 200...600))
         diceImageViewTwo.layer.position = CGPoint(x: Int.random(in: 100...200), y: Int.random(in: 200...600))
+    }
+    
+    func DeviceVibrationStart() {
+        
+        let vibrate = UINotificationFeedbackGenerator()
+        vibrate.notificationOccurred(.success)
+    }
+    
+    func DeviceVibrationEnd() {
+        
+        let vibrate = UINotificationFeedbackGenerator()
+        vibrate.notificationOccurred(.error)
     }
     
     
